@@ -1,0 +1,259 @@
+{
+  "appliance": {
+    "information": {
+      "Brand": "Whirlpool",
+      "model": "JA24WE8912",
+      "id": 2021061,
+      "label": "WhirlpoolWasher",
+      "info": {
+        "title": "KitchenMicrowaveWPJ211",
+        "year": 2020,
+        "width": "29 7/8",
+        "height": "16 1/2",
+        "convection": false,
+        "controls": "Electronic",
+        "capacity": 1.6,
+        "Wattage": 1000,
+        "microwave_type": "Over-the-range",
+        "active": false,
+        "description": [
+          "Voice Assistant Built-in",
+          "Two-speed, 300-CFM venting system",
+          "Stainless Steel color finish"
+        ]
+      }
+    },
+    "structure": {
+      "x": {
+        "Door": {
+          "width": "%",
+          "type": "door",
+          "label": "Door",
+          "items": {
+            "x": {
+              "handle": {
+                "width": "num",
+                "alignment": "right",
+                "type": "handle",
+                "label": "Handle"
+              }
+            }
+          }
+        },
+        "Controls": {
+          "width": "%",
+          "items": {
+            "y": {
+              "display": {
+                "type": "LED"
+              },
+              "productControls": {
+                "items": {
+                  "y": {
+                    "cookTimerClock": {
+                      "items": {
+                        "x" : {
+                          "cook": {
+                            "type": "button",
+                            "width": "33%"
+                          },
+                          "timer": {
+                            "label": "timer",
+                            "type": "button",
+                            "width": "33%",
+                            "default": "1min",
+                            "options": [
+                              "1min", "2min", "5min"
+                            ]
+                          },
+                          "clock": {
+                            "type": "clock",
+                            "width": "33%"
+                          }
+                        }
+                      }
+                      
+                  }
+                  }
+                }
+              },
+              "keypad": {
+                "items": {
+                  "grid": {
+                    "rows": "4",
+                    "columns": "3",
+                    "elements": {
+                      "1": {
+                        "type": "button"
+                      },
+                      "2": {
+                        "type": "button"
+                      },
+                      "3": {
+                        "type": "button"
+                      },
+                      "4": {
+                        "type": "button"
+                      },
+                      "5": {
+                        "type": "button"
+                      },
+                      "6": {
+                        "type": "button"
+                      },
+                      "7": {
+                        "type": "button"
+                      },
+                      "8": {
+                        "type": "button"
+                      },
+                      "9": {
+                        "type": "button"
+                      },
+                      "stop": {
+                        "type": "button"
+                      },
+                      "0": {
+                        "type": "button"
+                      },
+                      "start": {
+                        "type": "button"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "functions": {
+      "items": {
+        "oven": {
+          "label": "oven",
+          "id": 2064442101231
+        },
+        "washer": {
+          "label": "washer",
+          "id": 2021005912312,
+          "items": {
+            "woolProgram": {
+              "description": "Use program to wash wool clothes",
+              "actions": [
+                {
+                  "1": "turn ${Controls.y.productControls.cookTimerClock.x.timer} to {Controls.y.productControls.cookTimerClock.x.timer.options[2]}",
+                  "2": "adjust water level to desired amount",
+                  "3": "press start"
+                }
+              ]
+            }
+          }
+        },
+        "dryer": {
+          "label": "washer",
+          "id": 2021005912312
+        },
+        "washerDryer": {
+          "label": "washer",
+          "id": 2021005912312
+        }
+      }
+    },
+    "behavior": {
+      "oven": {
+        "power": "0/1",
+        "label": "oven",
+        "settings": {
+          "temperature": {
+            "key": "Temperature",
+            "value": 123,
+            "unit": "°C"
+          },
+          "duration": {
+            "key": "Duration",
+            "value": 123,
+            "unit": "seconds"
+          },
+          "air": {
+            "key": "Fan",
+            "value": 123,
+            "unit": "cc"
+          }
+        }
+      },
+      "washer": {
+        "power": "0/1",
+        "control": "start/pause",
+        "label": "washer",
+        "id": 2021012313,
+        "settings": {
+          "waterTemperature": {
+            "label": "Temperature",
+            "hot": {
+              "value": 123,
+              "unit": "°C"
+            },
+            "cold": {
+              "value": 123,
+              "unit": "°C"
+            }
+          },
+          "process": {
+            "label": "process",
+            "options": {
+              "soak": {
+                "duration": {
+                  "key": "Duration",
+                  "value": 123,
+                  "unit": "seconds"
+                }
+              },
+              "wash": {
+                "duration": {
+                  "key": "Duration",
+                  "value": 123,
+                  "unit": "seconds"
+                }
+              },
+              "rinse": {
+                "duration": {
+                  "key": "Duration",
+                  "value": 123,
+                  "unit": "seconds"
+                }
+              },
+              "spin": {
+                "duration": {
+                  "key": "Duration",
+                  "value": 123,
+                  "unit": "seconds"
+                }
+              }
+            }
+          },
+          "cycles": {
+            "label": "cycles",
+            "options": {
+              "normal": {
+                "spinSpeed": "RPM400"
+              },
+              "delicates": {
+                "spinSpeed": "RPM600"
+              },
+              "speedWash": {
+                "spinSpeed": "RPM800"
+              },
+              "heavyduty": {
+                "spinSpeed": "RPM1000"
+              }
+            }
+          }
+        }
+      },
+      "refrigerator": {
+        
+      }
+    }
+  }
+}
